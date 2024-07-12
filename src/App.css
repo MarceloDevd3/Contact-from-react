@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+:root {
+  --Green--200-lighter: hsl(148, 38%, 91%);
+  --Green-600-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-500-medium: #87a3a6;
+  --Grey-900-darker: hsl(187, 24%, 22%);
+}
+
+body {
+  font-size: 1em;
+  font-family: "Karla", sans-serif;
+}
+
+button:active {
+  background-color: var(--Grey-900-darker);
+}
+
+fieldset {
+  border: none;
+}
+
+body {
+  background-color: var(--Green--200-lighter);
+}
+
+.container {
+  width: 375px;
+  height: auto;
+  margin: 10% auto;
+  background-color: var(--White);
+  padding: 1.7em 2em;
+  border-radius: 10px;
+}
+
+.container .contact--title {
+  font-size: 1.5em;
+  margin-bottom: 1.1em;
+}
+
+.form--container {
+  display: grid;
+  grid-template-columns: 310px;
+  grid-template-rows: 2fr;
+  row-gap: 15px;
+  grid-template-areas: "input1" "input2" "input3" "input4" "input5" "input6";
+}
+
+fieldset>div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 0;
+  padding: 0 1.5em;
+  height: 54px;
+  border-radius: 7px;
+  outline: 1px #919a99 solid;
+}
+
+fieldset>div label {
+  margin-left: 25px;
+}
+
+fieldset>div>input {
+  width: 20px;
+}
+
+input {
+  padding-left: 10px;
+}
+
+.gridArea1>input,
+.gridArea2>input,
+.gridArea3>input,
+.gridArea4>input,
+.gridArea5>input {
+  border: none;
+  margin: 5px 0;
+  outline: 1px #919a99 solid;
+  border-radius: 5px;
+  height: 44px;
+}
+
+.gridArea1 input {
+  grid-area: input1;
+}
+
+.gridArea2 input {
+  grid-area: input2;
+}
+
+.gridArea3 {
+  grid-area: input3;
+}
+
+.gridArea4 {
+  grid-area: input4;
+}
+
+.gridArea5 {
+  grid-area: input5;
+}
+
+.gridArea6 {
+  grid-area: input6;
+}
+
+.gridArea5>label {
+  margin: 10px 0;
+}
+
+input[type="radio"] {
+  accent-color: var(--Green-600-medium);
+}
+
+
+textarea {
+  border-radius: 7px;
+  border: none;
+  outline: 1px #919a99 solid;
+
+  height: 200px;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+
+
+
+
+.gridArea6 {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  flex-wrap: wrap;
+  width: 330px;
+  height: 70px;
+}
+
+input[type="checkbox"] {
+  align-self: flex-start;
+  width: 15px;
+  margin-top: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 7px;
+  height: 60px;
+  color: #fff;
+  background-color: var(--Green-600-medium);
+}
+
+form>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.small {
+  margin-top: 4px;
+  transition: color ease-in 1s;
+  color: var(--Red);
+}
+
+.sucess--popUp {
+  position: absolute;
+  color: var(--White);
+  top: 5px;
+  left: 17%;
+  width: 330px;
+  padding: 1em;
+  height: 100px;
+  border-radius: 15px;
+  background-color: var(--Grey-900-darker);
+}
+
+.sucess--popUp .row {
+  display: flex;
+  padding: 5px;
+}
+
+.sucess--popUp .row > img {
+  margin-right: 5px;
+}
+
+
+@media (min-width:1024px) {
+
+  .container {
+    width: 735px;
+    height: auto;
+    margin: 10% auto;
+    padding: 1.7em 2em;
+    border-radius: 10px;
+  }
+
+  .form--container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    grid-template-areas:
+      "input1 input1 input2 input2"
+      "input3 input3 input3 input3"
+      "input4 input4 input4 input4"
+      "input5 input5 input5 input5"
+      "input6 input6 input6 input6"
+      "sub sub sub sub"
+    ;
+  }
+
+
+  .gridArea1>input,
+  .gridArea2>input,
+  .gridArea3>input,
+  .gridArea4>input,
+  .gridArea5>input {
+    margin: 15px 0;
+  }
+
+
+
+  .gridArea2 {
+    width: 106%;
+  }
+
+
+  .gridArea4 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 15px;
+    grid-template-areas: "left right";
+  }
+
+  .left {
+    grid-area: left;
+  }
+
+  .right {
+    grid-area: right;
+  }
+
+
+  .gridArea6 {
+    width: 70%;
+    height: 70px;
+  }
+
+  input[type="checkbox"] {
+
+    align-self: flex-start;
+    width: 15px;
+    margin-right: 15px;
+    accent-color: var(--Green-600-medium);
+  }
+
+  button {
+    grid-area: sub;
+  }
+
+
+  
+.sucess--popUp {
+  top: 37px;
+  left: 34%;
+  width: 450px;
+  padding: 1em 1.2em;
+}
+}
+
+@media  (min-width: 1440px) { 
+.sucess--popUp {
+  top: 45px;
+}
+}
+
+/*
+@media (min-width:1024px) {
+
+  .container {
+    width: 735px;
+    height: auto;
+    margin: 10% auto;
+    background-color: var(--White);
+    padding: 1.7em 2em;
+    border-radius: 10px;
+  }
+
+  .form--container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    grid-template-areas:
+     "input1 input1 input2 input2"
+     "input3 input3 input3 input3" 
+     "input4 input4 input4 input4"
+     "input5 input5 input5 input5"
+     "input6 input6 input6 input6"
+     "sub sub sub sub"
+     ;
+     min-width: 500px;
+     background-color: aqua;
+  }
+
+
+
+.gridArea1 > input{
+  width: 315px;
+  grid-area: input1;
+  background-color: yellow;
+}
+
+.gridArea2 > input {
+  width: 325px;
+  grid-area: input2;
+  background-color: rebeccapurple;
+}
+
+
+.gridArea5 > label {
+  margin: 10px 0;
+}
+  .gridArea4 {
+    display: flex;
+    justify-content:space-between ;
+    grid-area: input4;
+  }
+
+  fieldset > div label {
+    width: 225px;
+    margin-left: -25px;
+    background: hotpink;
+  }
+  fieldset > div > input  {
+    width: 100px;
+    margin-left: -45px;
+  }
+
+ 
+  
+  button {
+    grid-area: sub;
+  }
+
+}
+*/
